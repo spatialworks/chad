@@ -1,6 +1,9 @@
 ## Load libraries
 library(sf)
 library(tibble)
+library(magrittr)
+library(dplyr)
+library(tibble)
 
 ## Read and process regions of Chad
 regions <- sf::st_read(dsn = "data-raw/tcd_admbnda_adm1_ocha",
@@ -33,6 +36,64 @@ names(settlements) <- c("id", "name1", "name2", "name3",
                         "population", "elevation",
                         "dem", "timezone", "modDate")
 settlements <- tibble::tibble(settlements)
+
+settlements <- settlements %>%
+  mutate(
+    name1 = stringr::str_replace_all(
+      string = name1, pattern = "é|è|ë|ė|ē", replacement = "e"
+    ),
+    name1 = stringr::str_replace_all(
+      string = name1, pattern = "ï|î|ī", replacement = "i"
+    ),
+    name1 = stringr::str_replace_all(
+      string = name1, pattern = "â|á", replacement = "a"
+    ),
+    name1 = stringr::str_replace_all(
+      string = name1, pattern = "ô", replacement = "o"
+    ),
+    name1 = stringr::str_replace_all(
+      string = name1, pattern = "Ū", replacement = "U"
+    ),
+    name1 = stringr::str_replace_all(
+      string = name1, pattern = "ū|û", replacement = "u"
+    ),
+    name2 = stringr::str_replace_all(
+      string = name2, pattern = "é|è|ë|ė|ē", replacement = "e"
+    ),
+    name2 = stringr::str_replace_all(
+      string = name2, pattern = "ï|î|ī", replacement = "i"
+    ),
+    name2 = stringr::str_replace_all(
+      string = name2, pattern = "â|á", replacement = "a"
+    ),
+    name2 = stringr::str_replace_all(
+      string = name2, pattern = "ô", replacement = "o"
+    ),
+    name2 = stringr::str_replace_all(
+      string = name2, pattern = "Ū", replacement = "U"
+    ),
+    name2 = stringr::str_replace_all(
+      string = name2, pattern = "ū|û", replacement = "u"
+    ),
+    name3 = stringr::str_replace_all(
+      string = name3, pattern = "é|è|ë|ė|ē", replacement = "e"
+    ),
+    name3 = stringr::str_replace_all(
+      string = name3, pattern = "ï|î|ī", replacement = "i"
+    ),
+    name3 = stringr::str_replace_all(
+      string = name3, pattern = "â|á", replacement = "a"
+    ),
+    name3 = stringr::str_replace_all(
+      string = name3, pattern = "ô", replacement = "o"
+    ),
+    name3 = stringr::str_replace_all(
+      string = name3, pattern = "Ū", replacement = "U"
+    ),
+    name3 = stringr::str_replace_all(
+      string = name3, pattern = "ū|û", replacement = "u"
+    )
+  )
 
 usethis::use_data(settlements, overwrite = TRUE, compress = "xz")
 
