@@ -11,11 +11,15 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+library(chad)
+library(sf)
 ```
 
 # chad: Datasets for Use in Designing Surveys in Chad
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/spatialworks/chad/workflows/R-CMD-check/badge.svg)](https://github.com/spatialworks/chad/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/spatialworks/chad/badge)](https://www.codefactor.io/repository/github/spatialworks/chad)
 <!-- badges: end -->
@@ -32,3 +36,17 @@ remotes::install_github("spatialworks/chad)
 ```
 
 ## Usage
+
+### Region borders
+
+The Chad region borders is accessed via the `regions` dataset.
+
+```{r}
+chad::regions
+```
+
+The regions borders of Chad can be plotted by:
+
+```{r}
+plot(chad::regions, max.plot = 1, col = NA, main = NULL)
+```
