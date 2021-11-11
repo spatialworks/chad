@@ -1,0 +1,22 @@
+title: chad
+
+url: https://spatialworks.org/chad
+
+template:
+  params:
+    bootswatch: sandstone
+    #ganalytics: UA-102485058-4
+
+reference:
+- title: Description
+  contents:
+  - chad
+
+- title: Data
+  contents:
+  - regions
+  - departments
+  - districts
+  - prefectures
+  - settlements
+  - villages
