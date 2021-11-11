@@ -35,6 +35,23 @@
 ################################################################################
 #
 #'
+#' Districts of Chad
+#'
+#' @format An *sf* object with 126 features and 4 fields
+#'
+#' @source MSF from OCHA
+#'
+#' @examples
+#' districts
+#'
+#
+################################################################################
+"districts"
+
+
+################################################################################
+#
+#'
 #' Prefectures of LAC region of Chad
 #'
 #' @format An *sf* object with 10 features and 18 fields
@@ -54,9 +71,9 @@
 #'
 #' Settlements of Chad
 #'
-#' @format A *tibble* object with 11524 rows and 19 columns
+#' @format A *tibble* object with 16963 features and 15 fields
 #'
-#' @source TBC
+#' @source https://data.humdata.org/dataset/chad-populated-places-settlements
 #'
 #' @examples
 #' settlements

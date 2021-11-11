@@ -5,10 +5,10 @@
 \alias{settlements}
 \title{Settlements of Chad}
 \format{
-A \emph{tibble} object with 11524 rows and 19 columns
+A \emph{tibble} object with 16963 features and 15 fields
 }
 \source{
-TBC
+https://data.humdata.org/dataset/chad-populated-places-settlements
 }
 \usage{
 settlements

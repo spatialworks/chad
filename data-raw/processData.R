@@ -17,6 +17,12 @@ departments <- sf::st_read(dsn = "data-raw/tcd_admbnda_adm2_ocha_20170615",
 
 usethis::use_data(departments, overwrite = TRUE, compress = "xz")
 
+## Read and process districts of Chad
+districts <- sf::st_read(dsn = "data-raw/ocha_2019",
+                         layer = "TCD_District_Boundary_2019")
+
+usethis::use_data(districts, overwrite = TRUE, compress = "xz")
+
 ## Read and process prefectures of Chad
 prefectures <- sf::st_read(dsn = "data-raw/tcd_a_admbnd_adm3_ocha",
                            layer = "tcd_a_admbnd_adm3_ocha")
@@ -94,6 +100,10 @@ settlements <- settlements %>%
       string = name3, pattern = "ū|û", replacement = "u"
     )
   )
+
+
+settlements <- sf::st_read(dsn = "data-raw/tcd_p_ppl_settlements_inseed",
+                           layer = "tcd_p_ppl_Villages_cleaned_inseed")
 
 usethis::use_data(settlements, overwrite = TRUE, compress = "xz")
 
