@@ -23,6 +23,7 @@ library(sf)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/spatialworks/chad/workflows/R-CMD-check/badge.svg)](https://github.com/spatialworks/chad/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/spatialworks/chad/badge)](https://www.codefactor.io/repository/github/spatialworks/chad)
+[![DOI](https://zenodo.org/badge/417356740.svg)](https://zenodo.org/badge/latestdoi/417356740)
 <!-- badges: end -->
 
 Designing surveys require relevant datasets to be used as basis for sample size calculations, sampling design, survey planning/logistics and survey implementation. These include datasets on population, lists of sampling clusters, map datasets for spatial sampling, and previous survey datasets that can be used for estimating indicator variance and design effects. This package contains relevant datasets for use in designing surveys in Chad.

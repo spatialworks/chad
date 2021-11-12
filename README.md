@@ -12,6 +12,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/spatialworks/chad/workflows/R-CMD-check/badge.svg)](https://github.com/spatialworks/chad/actions)
 [![CodeFactor](https://www.codefactor.io/repository/github/spatialworks/chad/badge)](https://www.codefactor.io/repository/github/spatialworks/chad)
+[![DOI](https://zenodo.org/badge/417356740.svg)](https://zenodo.org/badge/latestdoi/417356740)
 <!-- badges: end -->
 
 Designing surveys require relevant datasets to be used as basis for
